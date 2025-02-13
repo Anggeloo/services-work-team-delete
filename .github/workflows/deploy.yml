@@ -24,7 +24,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/work-team-delete:latest .
-          docker tag ${{ secrets.DOCKER_USERNAME }}/work-team-delete:latest ${{ secrets.DOCKER_USERNAME }}/work-team-add:${{ github.sha }}
+          docker tag ${{ secrets.DOCKER_USERNAME }}/work-team-delete:latest ${{ secrets.DOCKER_USERNAME }}/work-team-delete:${{ github.sha }}
 
       - name: Push Docker image
         run: |
